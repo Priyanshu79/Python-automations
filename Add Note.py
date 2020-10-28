@@ -1,6 +1,8 @@
+## Simple program to meet my needs of making notes- on click- in wordpad(because it is lite and quick), and naming of the notes done on the basis of date and time ##
+
+
 import os
 from datetime import datetime
-from time import sleep
 import subprocess
 
 path='C:\Program Files\Windows NT\Accessories'  ## the path where wordpad exists
@@ -16,16 +18,12 @@ f=f'{date}---{time}'
 
 with open(f'{f}.rtf','w') as fi: pass
 
-
-a=str(os.getcwd())
+a=str(os.getcwd())  ## The script would make notes in whichever directry it exists in ##
 listi=a.split(sep='\\')
 se='/'
 address=se.join(listi)
 
-
 os.chdir(path)
-
-
 
 subprocess.Popen(['wordpad.exe',f'{address}/{f}.rtf'])
 
