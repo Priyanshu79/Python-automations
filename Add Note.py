@@ -18,7 +18,7 @@ f=f'{date}---{time}'
 
 with open(f'{f}.rtf','w') as fi: pass
 
-a=str(os.getcwd())  ## The script would make notes in whichever directry it exists in ##
+a=str(os.getcwd())  ## The script would make notes in whichever directory it exists in ##
 listi=a.split(sep='\\')
 se='/'
 address=se.join(listi)
